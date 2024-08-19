@@ -4,20 +4,27 @@
 import PackageDescription
 
 let package = Package(
-    name: "RSFUIPasswordScanner",
+    name: "RSFUIPassportScanner",
+    platforms: [.iOS(.v16)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "RSFUIPasswordScanner",
-            targets: ["RSFUIPasswordScanner"]),
+            name: "RSFUIPassportScanner",
+            targets: ["RSFUIPassportScanner"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/appintheair/MRZScanner.git", .upToNextMajor(from: "1.1.2")),
+        .package(url: "https://github.com/appintheair/MRZParser.git", .upToNextMajor(from: "1.1.2"))
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "RSFUIPasswordScanner"),
+            name: "RSFUIPassportScanner",
+            dependencies: ["MRZParser", "MRZScanner"]
+        ),
         .testTarget(
-            name: "RSFUIPasswordScannerTests",
-            dependencies: ["RSFUIPasswordScanner"]),
+            name: "RSFUIPassportScannerTests",
+            dependencies: ["RSFUIPassportScanner"]),
     ]
 )

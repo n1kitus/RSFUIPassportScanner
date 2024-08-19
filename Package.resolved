@@ -1,0 +1,24 @@
+{
+  "originHash" : "d6e44a85f06c703785ad245c5618ded1c959f897ebe4e7db60baa05d48df0f86",
+  "pins" : [
+    {
+      "identity" : "mrzparser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/appintheair/MRZParser.git",
+      "state" : {
+        "revision" : "64b73fae8092b31d0a378f0d000c244470c7ac44",
+        "version" : "1.1.3"
+      }
+    },
+    {
+      "identity" : "mrzscanner",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/appintheair/MRZScanner.git",
+      "state" : {
+        "revision" : "aad052bdb69e56800271a268daa6ba0f7c755812",
+        "version" : "1.1.2"
+      }
+    }
+  ],
+  "version" : 3
+}
